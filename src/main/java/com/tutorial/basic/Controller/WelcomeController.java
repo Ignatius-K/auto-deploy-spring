@@ -18,4 +18,9 @@ public class WelcomeController {
         System.out.println("testing out path .......................");
         return id;
     }
+
+    @GetMapping("/b/api/{id}")
+    public int printNumber(@PathVariable int id) {
+        return id;
+    }
 }
