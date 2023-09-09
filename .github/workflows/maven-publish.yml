@@ -24,13 +24,14 @@ jobs:
       with:
         java-version: '17'
         distribution: 'oracle'
+        cache: "maven"
         
-    - name: Maven deps caching
-      uses: actions/cache@v3
-      with:
-        path: ~/m2
-        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-        restore-keys: ${{ runner.os }}-m2
+    # - name: Maven deps caching
+    #   uses: actions/cache@v3
+    #   with:
+    #     path: ~/m2
+    #     key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+    #     restore-keys: ${{ runner.os }}-m2
 
     - name: Build with Maven
       run: |
