@@ -43,3 +43,7 @@ jobs:
         name: build-jar
         path: /home/runner/work/auto-deploy-spring/auto-deploy-spring/target/basic-0.0.1-SNAPSHOT.jar
 
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag basic:$(date +%s)
+
+
