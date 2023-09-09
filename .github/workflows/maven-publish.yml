@@ -28,3 +28,10 @@ jobs:
       run: |
         sudo apt install maven
         mvn -B package --file pom.xml
+
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.3
+      with:
+        name: build-jar
+        path: /target
+
