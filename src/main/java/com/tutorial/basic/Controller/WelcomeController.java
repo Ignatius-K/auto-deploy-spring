@@ -14,7 +14,7 @@ public class WelcomeController {
     }
 
     @GetMapping("/b/api/{id}")
-    public int printNumber(@PathVariable int id) {
+    public String printNumber(@PathVariable String id) {
         return id;
     }
 }
