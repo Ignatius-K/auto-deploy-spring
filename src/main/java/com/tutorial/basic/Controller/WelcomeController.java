@@ -19,8 +19,4 @@ public class WelcomeController {
         return id;
     }
 
-    @GetMapping("/b/api/{id}")
-    public int printNumber(@PathVariable int id) {
-        return id;
-    }
 }
