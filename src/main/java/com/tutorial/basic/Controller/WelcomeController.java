@@ -13,8 +13,9 @@ public class WelcomeController {
         return "hello world";
     }
 
-    @GetMapping("/b/api/{id}")
+    @GetMapping("/{id}")
     public String printNumber(@PathVariable String id) {
+        System.out.println("testing out path .......................");
         return id;
     }
 }
